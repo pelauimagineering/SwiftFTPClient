@@ -244,7 +244,6 @@ public class FTPClient {
                 throw FTPError.cancelled
             }
             
-//            if #available(macOS 10.15.4, *) {
             if #available(iOS 13.4, *) {
                 let data = try fileHandle.read(upToCount: bufferSize)
                 if let data = data, !data.isEmpty {
